@@ -39,7 +39,8 @@ dependencies:
   sizer: ^2.0.15
   flutter_credit_card: ^3.0.6
   glassmorphism: ^3.0.0
-  font_awesome_flutter: ^10.4.0
+  stacked_card_carousel: ^0.0.4
+  lottie: ^2.3.0
 
 dev_dependencies:
   flutter_test:

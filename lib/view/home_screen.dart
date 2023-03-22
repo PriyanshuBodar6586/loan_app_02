@@ -1,9 +1,8 @@
-import 'dart:ui';
+// ignore_for_file: camel_case_types, prefer_const_constructors
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/credit_card_brand.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
@@ -33,7 +32,7 @@ class _Home_screenState extends State<Home_screen> {
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
         backgroundColor: CupertinoColors.white.withOpacity(0.0),
-        middle: Text("Home Screen",style: TextStyle(color: CupertinoColors.white)),
+        middle: const Text("Home Screen",style: TextStyle(color: CupertinoColors.white)),
       ), child:backGround(
      SingleChildScrollView(
        scrollDirection: Axis.vertical,
@@ -66,7 +65,7 @@ class _Home_screenState extends State<Home_screen> {
            ),
            SingleChildScrollView(
              scrollDirection: Axis.horizontal,
-             physics: BouncingScrollPhysics(),
+             physics: const BouncingScrollPhysics(),
              child: Padding(
                padding: const EdgeInsets.all(8.0),
                child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -90,7 +89,7 @@ class _Home_screenState extends State<Home_screen> {
              padding: const EdgeInsets.all(8.0),
              child: GlassmorphicContainer(
              width: 95.w,
-             height: 36.5.h,
+             height: 28.h,
              borderRadius: 20,
              blur: 10,
              alignment: Alignment.bottomCenter,
@@ -102,7 +101,7 @@ class _Home_screenState extends State<Home_screen> {
                    Color(0xffffffff).withOpacity(0.1),
                    Color(0xFFFFFFFF).withOpacity(0.05),
                  ],
-                 stops: [
+                 stops: const [
                    0.1,
                    1,
                  ]),
@@ -127,11 +126,6 @@ class _Home_screenState extends State<Home_screen> {
                      Padding(
                        padding: const EdgeInsets.symmetric(horizontal: 40),
                        child: Divider(height: 1.sp,color: Colors.white70,),
-                     ),
-                     _listItem((){Get.to(Mutual_loan());},"Adhar Loan Guid",CupertinoIcons.creditcard,Icons.arrow_forward_ios_sharp),
-                     Padding(
-                       padding: const EdgeInsets.symmetric(horizontal: 40),
-                       child: Divider(height:1.sp,color: Colors.white70,),
                      ),
                      _listItem((){Get.to(Mutual_loan());},"Bank Information",Icons.account_balance_rounded,Icons.arrow_forward_ios_sharp),
                      Padding(
@@ -178,7 +172,7 @@ _menuItem(cColor,String text,Color bColors,IconData icons) {
           Color(0xffffffff).withOpacity(0.1),
           Color(0xFFFFFFFF).withOpacity(0.05),
         ],
-        stops: [
+        stops: const [
           0.1,
           1,
         ]),
