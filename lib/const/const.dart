@@ -130,19 +130,10 @@ Once the inspection of the property is done, you need to sign the agreement of t
 """,
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                          color: Colors.white.withOpacity(0.8), fontSize: 17.5.sp),
+                          color: Colors.white.withOpacity(0.8), fontSize: 13.sp,decoration: TextDecoration.none),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SelectableText(
-                      """
-""",
-                      textAlign: TextAlign.start,
-                      style: TextStyle(
-                          color: Colors.white.withOpacity(0.8), fontSize: 17.5.sp),
-                    ),
-                  ),
+
                   Image.asset(pStrUrl),
                   Container(
                     height: 22.h,
@@ -185,7 +176,7 @@ Once the inspection of the property is done, you need to sign the agreement of t
                   const Color((0xFFFFFFFF)).withOpacity(0.5),
                 ],
               ),
-              child:Text("Next",style: TextStyle(color: Colors.white,fontSize: 25.sp),)),
+              child:Text("Next",style: TextStyle(color: Colors.white,fontSize: 25.sp,decoration: TextDecoration.none),)),
         ),
       ],
     ),

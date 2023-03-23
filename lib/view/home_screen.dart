@@ -7,8 +7,11 @@ import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:loan_app_02/view/epf/epf.dart';
 import 'package:loan_app_02/view/loan%20type/mutual_loan.dart';
 import 'package:sizer/sizer.dart';
+
+import 'calculator.dart';
 
 class Home_screen extends StatefulWidget {
   const Home_screen({Key? key}) : super(key: key);
@@ -32,7 +35,7 @@ class _Home_screenState extends State<Home_screen> {
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
         backgroundColor: CupertinoColors.white.withOpacity(0.0),
-        middle: const Text("Home Screen",style: TextStyle(color: CupertinoColors.white)),
+        middle: const Text("EPF Service",style: TextStyle(color: CupertinoColors.white)),
       ), child:backGround(
      SingleChildScrollView(
        scrollDirection: Axis.vertical,
@@ -70,15 +73,15 @@ class _Home_screenState extends State<Home_screen> {
                padding: const EdgeInsets.all(8.0),
                child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
                  children: [
-                   _menuItem(Colors.black,"All\ncalculator",Colors.white, Icons.calculate_rounded),
+                   _menuItem((){Get.to(Calculator());},Colors.black,"All\ncalculator",Colors.white, Icons.calculate_rounded),
                    SizedBox(
                      width: 2.5.w,
                    ),
-                   _menuItem(Colors.black,"Invest \nand Grow",Colors.white,Icons.trending_up_rounded),
+                   _menuItem((){},Colors.black,"Invest \nand Grow",Colors.white,Icons.trending_up_rounded),
                    SizedBox(
                      width: 2.5.w,
                    ),
-                   _menuItem(Colors.black,"EPF\nService",Colors.white,CupertinoIcons.doc_chart),
+                   _menuItem((){Get.to(Epf());},Colors.black,"EPF\nService",Colors.white,CupertinoIcons.doc_chart),
                  ],
                ),
              ),
@@ -157,42 +160,45 @@ class _Home_screenState extends State<Home_screen> {
   }
 }
 
-_menuItem(cColor,String text,Color bColors,IconData icons) {
-  return GlassmorphicContainer(
-    width: 15.h,
-    height: 20.h,
-    borderRadius: 20,
-    blur: 10,
-    alignment: Alignment.bottomCenter,
-    border: 2,
-    linearGradient: LinearGradient(
+_menuItem(void Function() onTap,cColor,String text,Color bColors,IconData icons) {
+  return GestureDetector(
+    onTap: onTap,
+    child: GlassmorphicContainer(
+      width: 15.h,
+      height: 20.h,
+      borderRadius: 20,
+      blur: 10,
+      alignment: Alignment.bottomCenter,
+      border: 2,
+      linearGradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xffffffff).withOpacity(0.1),
+            Color(0xFFFFFFFF).withOpacity(0.05),
+          ],
+          stops: const [
+            0.1,
+            1,
+          ]),
+      borderGradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [
-          Color(0xffffffff).withOpacity(0.1),
-          Color(0xFFFFFFFF).withOpacity(0.05),
+          Color(0xFFffffff).withOpacity(0.5),
+          Color((0xFFFFFFFF)).withOpacity(0.5),
         ],
-        stops: const [
-          0.1,
-          1,
-        ]),
-    borderGradient: LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        Color(0xFFffffff).withOpacity(0.5),
-        Color((0xFFFFFFFF)).withOpacity(0.5),
-      ],
-    ),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(icons,color: Colors.white,size: 20.sp),
-        SizedBox(
-          height: 1.h,
-        ),
-        Text (textAlign: TextAlign.center,text,style: TextStyle(fontSize: 15.sp,color: Colors.white),),
-      ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icons,color: Colors.white,size: 20.sp),
+          SizedBox(
+            height: 1.h,
+          ),
+          Text (textAlign: TextAlign.center,text,style: TextStyle(fontSize: 11.sp,color: Colors.white,decoration: TextDecoration.none),),
+        ],
+      ),
     ),
   );
 }

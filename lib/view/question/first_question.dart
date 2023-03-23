@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
+import 'package:loan_app_02/view/question/second.dart';
 import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
@@ -55,7 +57,7 @@ class _First_questionState extends State<First_question> {
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
         backgroundColor: CupertinoColors.white.withOpacity(0.0),
-        middle: const Text("Home Screen",
+        middle: const Text("Your Income",
             style: TextStyle(color: CupertinoColors.white)),
       ),
       child: backGround(
@@ -90,7 +92,7 @@ class FancyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  GlassmorphicContainer(
-              height: 45.h,
+              height: 47.h,
               width: 90.w,
               borderRadius: 20,
               blur: 10,
@@ -122,12 +124,12 @@ class FancyCard extends StatelessWidget {
                     Lottie.asset("assets/image/55607-flying-wallet-money.json",height: 150.sp,width: 150.sp,),
                     Text(
                       title,
-                      style:TextStyle(color: Colors.white),
+                      style:TextStyle(color: Colors.white,decoration: TextDecoration.none),
                     ),
                     ElevatedButton(
 
-                      onPressed: () { },
-                      child: Text("Go to Next Page",style: TextStyle(color: Colors.black)),
+                      onPressed: () { Get.to(Second_sscreen());},
+                      child: Text("Go to Next Page",style: TextStyle(color: Colors.white,decoration: TextDecoration.none)),
 
 
 

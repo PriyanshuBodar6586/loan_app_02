@@ -4,26 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
-import 'package:loan_app_02/view/loan%20guid/bike_loan.dart';
-import 'package:loan_app_02/view/loan%20guid/car_loan.dart';
-import 'package:loan_app_02/view/loan%20guid/eduction%20loan.dart';
-import 'package:loan_app_02/view/loan%20guid/gold_loan.dart';
-import 'package:loan_app_02/view/loan%20guid/home_loan.dart';
-import 'package:loan_app_02/view/loan%20guid/personal_loan.dart';
+import 'package:loan_app_02/view/EMICalculator.dart';
+import 'package:loan_app_02/view/FDCalculator.dart';
+import 'package:loan_app_02/view/GSTCalculator.dart';
+import 'package:loan_app_02/view/calculatorrr.dart';
 import 'package:sizer/sizer.dart';
 
-import '../loan guid/business_loan.dart';
+import 'SIPCalculator.dart';
+
+
 
 // ignore: camel_case_types
-class Mutual_loan extends StatefulWidget {
-  const Mutual_loan({Key? key}) : super(key: key);
+class Calculator extends StatefulWidget {
+  const Calculator({Key? key}) : super(key: key);
 
   @override
-  State<Mutual_loan> createState() => _Mutual_loanState();
+  State<Calculator> createState() => _CalculatorState();
 }
 
 // ignore: camel_case_types
-class _Mutual_loanState extends State<Mutual_loan> {
+class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -31,7 +31,7 @@ class _Mutual_loanState extends State<Mutual_loan> {
         automaticallyImplyLeading: false,
         backgroundColor: CupertinoColors.white.withOpacity(0.0),
         middle:
-            const Text("Loan Type", style: TextStyle(color: CupertinoColors.white)),
+        const Text("Calculator Type", style: TextStyle(color: CupertinoColors.white)),
       ),
       child: backGround(
         SingleChildScrollView(
@@ -42,13 +42,19 @@ class _Mutual_loanState extends State<Mutual_loan> {
               SizedBox(
                 height: 10.h,
               ),
-              _menuItem((){Get.to(const Personal_Loan());},Colors.black, "Personal Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/personal.png",0),
-              _menuItem((){Get.to(const Home_Loan());},Colors.black, "Home Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/home.png",1),
-              _menuItem((){Get.to(const Business_Loan());},Colors.black, "Business Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/business.png",0),
-              _menuItem((){Get.to(const Eduction_Loan());},Colors.black, "Eduction Loan","Anytime is a Good Time\nTo Invest", Colors.white,"assets/image/Eduction.png",1),
-              _menuItem((){Get.to(const Gold_Loan());},Colors.black, "Gold Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/gold.png",0),
-              _menuItem((){Get.to(const Car_Loan());},Colors.black, "Car Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/car.png",1),
-              _menuItem((){Get.to(const Bike_Loan());},Colors.black, "Bike Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/bike.png",0),
+              Container(
+                height: 20.h,
+                color: Colors.white60,
+              ),
+              _menuItem((){Get.to(Calculatorr());},Colors.black, "Calculator","Calculat Your All Amount", Colors.white,"assets/image/calculator.png",0),
+              _menuItem((){Get.to(FDCalculator());},Colors.black, "FD  Calculator","Calculat Your All Amount", Colors.white,"assets/image/fd.png",1),
+              _menuItem((){Get.to(GstCalculator());},Colors.black, "GST Calculator","Calculat Your All Amount", Colors.white,"assets/image/gst.png",0),
+              _menuItem((){Get.to(SIPCalculator());},Colors.black, "SIP Calculator","Calculat Your All Amount", Colors.white,"assets/image/sip.png",1),
+              _menuItem((){Get.to(EMICalculator());},Colors.black, "EMI Calculator","Calculat Your All Amount", Colors.white,"assets/image/emi.png",0),
+              Container(
+                height: 20.h,
+                color: Colors.white60,
+              ),
             ],
           ),
         ),
@@ -60,7 +66,7 @@ class _Mutual_loanState extends State<Mutual_loan> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GestureDetector(
-        onTap: onTap ,
+             onTap: onTap,
         child: GlassmorphicContainer(
           height: 18.h,
           width: 100.h,
@@ -102,7 +108,7 @@ class _Mutual_loanState extends State<Mutual_loan> {
                     SizedBox(
                       height: 3.h,
                     ),
-                    Text(ntext, style: TextStyle(fontSize: 8.sp,color: Colors.white70,decoration: TextDecoration.none)),
+                    Text(ntext, style: TextStyle(fontSize: 9.sp,color: Colors.white70,decoration: TextDecoration.none)),
                   ],
                 ),
               ),
@@ -140,11 +146,11 @@ class _Mutual_loanState extends State<Mutual_loan> {
                     SizedBox(
                       height: 2.h,
                     ),
-                    Text(text, style: TextStyle(fontSize: 18.sp,color: Colors.white,decoration: TextDecoration.none)),
+                    Text(text, style: TextStyle(fontSize: 18.sp,color: Colors.white,decoration: TextDecoration.none),),
                     SizedBox(
                       height: 3.h,
                     ),
-                    Text(ntext, style: TextStyle(fontSize: 9.sp,color: Colors.white70,decoration: TextDecoration.none)),
+                    Text(ntext, style: TextStyle(fontSize: 9.sp,color: Colors.white70,decoration: TextDecoration.none),),
                   ],
                 ),
               ),

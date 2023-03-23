@@ -17,7 +17,7 @@ void main() async {
 
     Sizer(
       builder: (context, orientation, deviceType) {
-        return  GetCupertinoApp(
+        return  GetMaterialApp(
           debugShowCheckedModeBanner: false,
           routes: {
             '/': (contest) =>Home_screen(),
