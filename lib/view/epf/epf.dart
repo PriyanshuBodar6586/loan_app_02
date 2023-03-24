@@ -1,10 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
+import 'package:loan_app_02/view/epf/e-passbok.dart';
+import 'package:loan_app_02/view/epf/international.dart';
+import 'package:loan_app_02/view/epf/kyc.dart';
+import 'package:loan_app_02/view/epf/online.dart';
+import 'package:loan_app_02/view/epf/personal.dart';
+import 'package:loan_app_02/view/epf/shaam.dart';
 
 import 'package:sizer/sizer.dart';
+
+import 'ecr.dart';
+import 'establishment.dart';
 
 // ignore: camel_case_types
 class Epf extends StatefulWidget {
@@ -34,8 +44,13 @@ class _EpfState extends State<Epf> {
               SizedBox(
                 height: 10.h,
               ),
+              Container(
+                height: 25.h,
+                width: 100.w,
+                color: Colors.white70,
+              ),
               _menuItem(
-                  () {},
+                  () {Get.to(const Establishment());},
                   Colors.black,
                   "Establishment Registration",
                   "Tep To More Information",
@@ -43,7 +58,7 @@ class _EpfState extends State<Epf> {
                   "assets/image/epf.png",
                   0),
               _menuItem(
-                  () {},
+                  ()  {Get.to(const KYC());},
                   Colors.black,
                   "KYC Updation",
                   "Tep To More InformationI",
@@ -51,7 +66,7 @@ class _EpfState extends State<Epf> {
                   "assets/image/epf.png",
                   1),
               _menuItem(
-                  () {},
+                  ()  {Get.to(const ECR());},
                   Colors.black,
                   "ECR/Returns and Payment",
                   "Tep To More Information",
@@ -59,7 +74,7 @@ class _EpfState extends State<Epf> {
                   "assets/image/epf.png",
                   0),
               _menuItem(
-                  () {},
+                  () {Get.to(const Online());},
                   Colors.black,
                   "Online Claims\naccount transfer",
                   "Tep To More Information",
@@ -67,7 +82,7 @@ class _EpfState extends State<Epf> {
                   "assets/image/epf.png",
                   1),
               _menuItem(
-                  () {},
+                  ()  {Get.to(const Epassbook());},
                   Colors.black,
                   "E-Passbook",
                   "Tep To More Information",
@@ -75,7 +90,7 @@ class _EpfState extends State<Epf> {
                   "assets/image/epf.png",
                   0),
               _menuItem(
-                  () {},
+                  () {Get.to(const Sharam());},
                   Colors.black,
                   "Sharam suvidha\ncommen ECR",
                   "Tep To More Information",
@@ -83,7 +98,7 @@ class _EpfState extends State<Epf> {
                   "assets/image/epf.png",
                   1),
               _menuItem(
-                  () {},
+                  ()  {Get.to(const Personal());},
                   Colors.black,
                   "Personal Portal",
                   "Tep To More Information",
@@ -91,13 +106,18 @@ class _EpfState extends State<Epf> {
                   "assets/image/epf.png",
                   0),
               _menuItem(
-                  () {},
+                  () {Get.to(const IWorker());},
                   Colors.black,
                   "International\nWorkers Portal",
                   "Tep To More Information",
                   Colors.white,
                   "assets/image/epf.png",
                   1),
+              Container(
+                height: 25.h,
+                width: 100.w,
+                color: Colors.white70,
+              ),
             ],
           ),
         ),

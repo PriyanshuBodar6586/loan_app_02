@@ -42,6 +42,11 @@ class _Mutual_loanState extends State<Mutual_loan> {
               SizedBox(
                 height: 10.h,
               ),
+              Container(
+                height: 25.h,
+                width: 100.w,
+                color: Colors.white70,
+              ),
               _menuItem((){Get.to(const Personal_Loan());},Colors.black, "Personal Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/personal.png",0),
               _menuItem((){Get.to(const Home_Loan());},Colors.black, "Home Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/home.png",1),
               _menuItem((){Get.to(const Business_Loan());},Colors.black, "Business Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/business.png",0),
@@ -49,6 +54,11 @@ class _Mutual_loanState extends State<Mutual_loan> {
               _menuItem((){Get.to(const Gold_Loan());},Colors.black, "Gold Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/gold.png",0),
               _menuItem((){Get.to(const Car_Loan());},Colors.black, "Car Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/car.png",1),
               _menuItem((){Get.to(const Bike_Loan());},Colors.black, "Bike Loan","Get upto ₹ 5 lakh for 36 months\n EMI", Colors.white,"assets/image/bike.png",0),
+              Container(
+                height: 25.h,
+                width: 100.w,
+                color: Colors.white70,
+              ),
             ],
           ),
         ),

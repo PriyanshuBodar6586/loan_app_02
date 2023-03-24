@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:loan_app_02/view/bank.dart';
 import 'package:loan_app_02/view/epf/epf.dart';
 import 'package:loan_app_02/view/loan%20type/mutual_loan.dart';
 import 'package:sizer/sizer.dart';
@@ -130,7 +131,7 @@ class _Home_screenState extends State<Home_screen> {
                        padding: const EdgeInsets.symmetric(horizontal: 40),
                        child: Divider(height: 1.sp,color: Colors.white70,),
                      ),
-                     _listItem((){Get.to(Mutual_loan());},"Bank Information",Icons.account_balance_rounded,Icons.arrow_forward_ios_sharp),
+                     _listItem((){Get.to(BankScreen());},"Bank Information",Icons.account_balance_rounded,Icons.arrow_forward_ios_sharp),
                      Padding(
                        padding: const EdgeInsets.symmetric(horizontal: 40),
                        child: Divider(height:1.sp,color: Colors.white70,),

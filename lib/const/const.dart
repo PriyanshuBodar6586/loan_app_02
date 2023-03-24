@@ -34,7 +34,7 @@ appBar(bool leading,String pStrText){
     automaticallyImplyLeading: leading,
     backgroundColor: CupertinoColors.white.withOpacity(0.0),
     middle: Text(pStrText,
-        style: TextStyle(color: CupertinoColors.white,fontSize: 20.sp)),
+        style: TextStyle(color: CupertinoColors.white,fontSize: 19.sp)),
   );
 }
 loans(String pStrLoanType, String pStrUrl) {
@@ -130,7 +130,7 @@ Once the inspection of the property is done, you need to sign the agreement of t
 """,
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                          color: Colors.white.withOpacity(0.8), fontSize: 13.sp,decoration: TextDecoration.none),
+                          color: Colors.white.withOpacity(0.8), fontSize: 11.5.sp,decoration: TextDecoration.none),
                     ),
                   ),
 

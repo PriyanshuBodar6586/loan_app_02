@@ -3,24 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
-import 'package:loan_app_02/view/question/four.dart';
 import 'package:sizer/sizer.dart';
 
-class Thred_Screen extends StatefulWidget {
-  const Thred_Screen({Key? key}) : super(key: key);
+class Four extends StatefulWidget {
+  const Four({Key? key}) : super(key: key);
 
   @override
-  State<Thred_Screen> createState() => _Thred_ScreenState();
+  State<Four> createState() => _FourState();
 }
 
-class _Thred_ScreenState extends State<Thred_Screen> {
+class _FourState extends State<Four> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
         backgroundColor: CupertinoColors.white.withOpacity(0.0),
-        middle: const Text("Pan Card",
+        middle: const Text("Aadhaar Card",
             style: TextStyle(color: CupertinoColors.white)),
       ),
       child: backGround(
@@ -32,45 +31,45 @@ class _Thred_ScreenState extends State<Thred_Screen> {
               SizedBox(
                 height: 11.h,
               ),
-            Container(
-              height: 25.h,
-              width: 100.w,
-              color: Colors.white70,
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GlassmorphicContainer(
-              height: 8.h,
-              width: 100.w,
-              borderRadius: 20,
-              blur: 10,
-              alignment: Alignment.bottomCenter,
-              border: 2,
-              linearGradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    Color(0xffffffff).withOpacity(0.1),
-                    Color(0xFFFFFFFF).withOpacity(0.05),
-                  ],
-                  stops: const [
-                    0.1,
-                    1,
-                  ]),
-              borderGradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFFffffff).withOpacity(0.5),
-                  Color((0xFFFFFFFF)).withOpacity(0.5),
-                ],
+              Container(
+                height: 25.h,
+                width: 100.w,
+                color: Colors.white70,
               ),
-              child: Center(child: Text(" You Have Pan card?",style: TextStyle(color: Colors.white,fontSize: 20.sp,decoration: TextDecoration.none)))
-          ),
-            ),
+              SizedBox(
+                height: 5.h,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GlassmorphicContainer(
+                    height: 8.h,
+                    width: 100.w,
+                    borderRadius: 20,
+                    blur: 10,
+                    alignment: Alignment.bottomCenter,
+                    border: 2,
+                    linearGradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xffffffff).withOpacity(0.1),
+                          Color(0xFFFFFFFF).withOpacity(0.05),
+                        ],
+                        stops: const [
+                          0.1,
+                          1,
+                        ]),
+                    borderGradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Color(0xFFffffff).withOpacity(0.5),
+                        Color((0xFFFFFFFF)).withOpacity(0.5),
+                      ],
+                    ),
+                    child: Center(child: Text(" You Have Aadhaar card?",style: TextStyle(color: Colors.white,fontSize: 19.sp,decoration: TextDecoration.none)))
+                ),
+              ),
               SizedBox(
                 height: 1.h,
               ),
@@ -78,7 +77,7 @@ class _Thred_ScreenState extends State<Thred_Screen> {
                 children: [
                   GestureDetector(
                     onTap: (){
-                   Get.to(Four());
+
                     },
                     child: GlassmorphicContainer(
                         height: 8.h,
@@ -113,7 +112,7 @@ class _Thred_ScreenState extends State<Thred_Screen> {
                     onTap: () {
                       Get.snackbar(
                         "Alert",
-                        "You can proceed only if you have the Pan Card...",
+                        "You can proceed only if you have the Aadhaar Card...",
                         colorText: Colors.white,
                         barBlur: 25,
                         backgroundColor:  Colors.transparent,
