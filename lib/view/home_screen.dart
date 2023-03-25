@@ -165,7 +165,7 @@ _menuItem(void Function() onTap,cColor,String text,Color bColors,IconData icons)
   return GestureDetector(
     onTap: onTap,
     child: GlassmorphicContainer(
-      width: 15.h,
+      width: 30.w,
       height: 20.h,
       borderRadius: 20,
       blur: 10,
