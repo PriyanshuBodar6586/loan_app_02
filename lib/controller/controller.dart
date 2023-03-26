@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 
 
-
+String mStrName = "";
 
 
 class HomeController extends GetxController {

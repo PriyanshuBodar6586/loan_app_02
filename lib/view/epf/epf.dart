@@ -52,7 +52,7 @@ class _EpfState extends State<Epf> {
               _menuItem(
                   () {Get.to(const Establishment());},
                   Colors.black,
-                  "Establishment Registration",
+                  "Establishment\nRegistration",
                   "Tep To More Information",
                   Colors.white,
                   "assets/image/epf.png",
@@ -209,7 +209,7 @@ class _EpfState extends State<Epf> {
                         child: Image.asset(
                           image,
                           fit: BoxFit.cover,
-                          height: 110.sp,
+                          height: 100.sp,
                           width: 100.sp,
                         ),
                       ),

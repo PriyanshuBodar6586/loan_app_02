@@ -36,7 +36,7 @@ class _Home_screenState extends State<Home_screen> {
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
         backgroundColor: CupertinoColors.white.withOpacity(0.0),
-        middle: const Text("EPF Service",style: TextStyle(color: CupertinoColors.white)),
+        middle: const Text("Loan Guide",style: TextStyle(color: CupertinoColors.white)),
       ), child:backGround(
      SingleChildScrollView(
        scrollDirection: Axis.vertical,
@@ -78,7 +78,7 @@ class _Home_screenState extends State<Home_screen> {
                    SizedBox(
                      width: 2.5.w,
                    ),
-                   _menuItem((){},Colors.black,"Invest \nand Grow",Colors.white,Icons.trending_up_rounded),
+                   _menuItem((){Get.to(Epf());},Colors.black,"Invest \nand Grow",Colors.white,Icons.trending_up_rounded),
                    SizedBox(
                      width: 2.5.w,
                    ),

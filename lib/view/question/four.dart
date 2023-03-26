@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:loan_app_02/const/const.dart';
+import 'package:loan_app_02/view/question/FinalScreen.dart';
 import 'package:sizer/sizer.dart';
 
 class Four extends StatefulWidget {
@@ -77,7 +78,7 @@ class _FourState extends State<Four> {
                 children: [
                   GestureDetector(
                     onTap: (){
-
+                      Get.to(FinalScreen());
                     },
                     child: GlassmorphicContainer(
                         height: 8.h,

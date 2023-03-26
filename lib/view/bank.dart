@@ -27,10 +27,16 @@ class _BankScreenState extends State<BankScreen> {
       navigationBar: appBar(false, "Bank Information"),
       child: backGround(
          Column(
-          children: [
-
+          children: [SizedBox(
+            height: 11.h,
+          ),
+           Container(
+             height: 25.h,
+             width: 100.w,
+             color: Colors.white70,
+           ),
             Flexible(
-              flex: 1,
+
               child: ListView.builder(
                 itemCount: cnt.bank.length,
                 physics: const BouncingScrollPhysics(),
